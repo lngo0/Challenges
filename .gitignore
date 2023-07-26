@@ -29,3 +29,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/com.coding.challenges/hackerrank/AccountComp.java
+/src/com.coding.challenges/TravelFromNearestPoint.java
+/src/com.coding.challenges/FindGoodEndings.java
+/src/com.coding.challenges/FindGoodEndings2.java
+/src/com.coding.challenges/ReductionCost.java
+/src/com.coding.challenges/AscBinarySort.java
+/src/com.coding.challenges/CheckerboardColors.java
