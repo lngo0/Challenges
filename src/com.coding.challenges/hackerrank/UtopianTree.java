@@ -30,6 +30,19 @@ public class UtopianTree {
             0 <= n <= 60
      */
     public static int utopianTree(int n) {
+        /*
+            Loop way
+            int count = 1;
+            for (int i = 0; i < n; i++) {
+                if (i%2 == 0) {
+                    count = count * 2;
+                } else {
+                    count = count + 1;
+                }
+            }
+            return count;
+         */
+        // a << b mean (a * 2^b)
         return (1 << ((n >> 1) + 1)) - 1 << n % 2;
     }
 }
