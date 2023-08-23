@@ -5,11 +5,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-class Student{
+class StudentJS {
     private int id;
     private String fname;
     private double cgpa;
-    public Student(int id, String fname, double cgpa) {
+    public StudentJS(int id, String fname, double cgpa) {
         super();
         this.id = id;
         this.fname = fname;
@@ -30,21 +30,21 @@ public class JavaSort {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
 
-        List<Student> studentList = new ArrayList<>();
+        List<StudentJS> studentJSList = new ArrayList<>();
         while(testCases>0){
             int id = in.nextInt();
             String fname = in.next();
             double cgpa = in.nextDouble();
 
-            Student st = new Student(id, fname, cgpa);
-            studentList.add(st);
+            StudentJS st = new StudentJS(id, fname, cgpa);
+            studentJSList.add(st);
 
             testCases--;
         }
-        studentList.sort(Comparator.comparing(Student::getCgpa).reversed()
-                .thenComparing(Student::getFname).thenComparing(Student::getId));
+        studentJSList.sort(Comparator.comparing(StudentJS::getCgpa).reversed()
+                .thenComparing(StudentJS::getFname).thenComparing(StudentJS::getId));
 
-        for(Student st: studentList){
+        for(StudentJS st: studentJSList){
             System.out.println(st.getFname());
         }
     }
