@@ -1,12 +1,14 @@
-package com.coding.challenges;
+package com.coding.challenges.hackerrank;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class NonDivisibleSubsets {
@@ -33,25 +35,19 @@ public class NonDivisibleSubsets {
         return result;
     }
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        Scanner sc = new Scanner(System.in);
 
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        int n = sc.nextInt(),
+            k = sc.nextInt();
 
-        int n = Integer.parseInt(firstMultipleInput[0]);
+        List<Integer> list = new ArrayList<>();
 
-        int k = Integer.parseInt(firstMultipleInput[1]);
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+        sc.close();
 
-        List<Integer> s = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .toList();
-
-        int result = nonDivisibleSubset(k, s);
-
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
+        int result = nonDivisibleSubset(k, list);
+        System.out.println(result);
     }
 }
