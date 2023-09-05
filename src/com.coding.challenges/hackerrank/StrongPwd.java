@@ -39,6 +39,30 @@ public class StrongPwd {
         return min;
 
     }
+    static int minimumNumber2(int n, String password) {
+        Matcher matchingCases = Pattern
+                .compile("([A-Z])|([a-z])|([0-9])|([!@#$%^&*()\\-+])")
+                .matcher(password);
+        Set<Integer> hashSet = new HashSet<>();
+
+        while (matchingCases.find()) {
+            for (int i = 1; i <= matchingCases.groupCount(); i++) {
+                if (matchingCases.group(i) != null) {
+                    hashSet.add(i);
+                }
+            }
+        }
+
+        int count = hashSet.size();
+        int symbolToAdd = 4 - count;
+
+        if (n + symbolToAdd < 6) {
+            return 6 - (n + symbolToAdd) + symbolToAdd;
+        }
+        else {
+            return symbolToAdd;
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n  = sc.nextInt();
