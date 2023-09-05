@@ -5,27 +5,28 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-class StudentJS {
-    private int id;
-    private String fname;
-    private double cgpa;
-    public StudentJS(int id, String fname, double cgpa) {
-        super();
-        this.id = id;
-        this.fname = fname;
-        this.cgpa = cgpa;
-    }
-    public int getId() {
-        return id;
-    }
-    public String getFname() {
-        return fname;
-    }
-    public double getCgpa() {
-        return cgpa;
-    }
-}
 public class JavaSort {
+
+    static class StudentJS {
+        private int id;
+        private String fname;
+        private double cgpa;
+        public StudentJS(int id, String fname, double cgpa) {
+            super();
+            this.id = id;
+            this.fname = fname;
+            this.cgpa = cgpa;
+        }
+        public int getId() {
+            return id;
+        }
+        public String getFname() {
+            return fname;
+        }
+        public double getCgpa() {
+            return cgpa;
+        }
+    }
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
