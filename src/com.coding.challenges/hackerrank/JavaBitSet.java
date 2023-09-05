@@ -17,9 +17,9 @@ public class JavaBitSet {
             String opCode = sc.next();
             int num1 = sc.nextInt();
             int num2 = sc.nextInt();
-            
+
             switch (opCode) {
-                case "AND":
+                case "AND" -> {
                     if (num1 == 1 && num2 == 2) {
                         b1.and(b2);
                     } else if (num1 == 2 && num2 == 1) {
@@ -29,8 +29,8 @@ public class JavaBitSet {
                     } else if (num1 == 2 && num2 == 2) {
                         b2.and(b2);
                     }
-                    break;
-                case "OR":
+                }
+                case "OR" -> {
                     if (num1 == 1 && num2 == 2) {
                         b1.or(b2);
                     } else if (num1 == 2 && num2 == 1) {
@@ -40,8 +40,8 @@ public class JavaBitSet {
                     } else if (num1 == 2 && num2 == 2) {
                         b2.or(b2);
                     }
-                    break;
-                case "XOR":
+                }
+                case "XOR" -> {
                     if (num1 == 1 && num2 == 2) {
                         b1.xor(b2);
                     } else if (num1 == 2 && num2 == 1) {
@@ -51,21 +51,21 @@ public class JavaBitSet {
                     } else if (num1 == 2 && num2 == 2) {
                         b2.xor(b2);
                     }
-                    break;
-                case "FLIP":
+                }
+                case "FLIP" -> {
                     if (num1 == 1) {
                         b1.flip(num2);
                     } else if (num1 == 2) {
                         b2.flip(num2);
                     }
-                    break;
-                case "SET":
+                }
+                case "SET" -> {
                     if (num1 == 1) {
                         b1.set(num2);
                     } else if (num1 == 2) {
                         b2.set(num2);
                     }
-                    break;
+                }
             }
             System.out.println(b1.cardinality() + " " + b2.cardinality());
         }
