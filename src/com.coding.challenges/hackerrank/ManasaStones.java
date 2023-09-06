@@ -1,6 +1,7 @@
 package com.coding.challenges.hackerrank;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -18,6 +19,21 @@ public class ManasaStones {
                 .distinct()
                 .boxed()
                 .collect(Collectors.toList());
+    }
+    public static List<Integer> stones2(int n, int a, int b) {
+        List<Integer> results = new ArrayList<>();
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+
+        if (a == b) {
+            return List.of((n - 1) * a);
+        }
+
+        for (int i = 0; i < n; i++) {
+            results.add(i * max + (n - 1 - i ) * min);
+        }
+
+        return results;
     }
 
     public static void main(String[] args) {
