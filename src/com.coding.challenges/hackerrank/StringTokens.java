@@ -16,7 +16,7 @@ public class StringTokens {
 
     Constraints
         1 <= length of s <= 4 * 10^5
-        s is composed of any of the following: English alphabetic letters, blank spaces, exclamation points (!),
+        s is composed of the following: English alphabetic letters, blank spaces, exclamation points (!),
             commas (,), question marks (?), periods (.), underscores (_), apostrophes ('), and at symbols (@).
     Output Format
         On the first line, print an integer, n, denoting the number of tokens in string s (they do not need to be unique).
@@ -27,7 +27,7 @@ public class StringTokens {
         String s = scan.nextLine();
 
         s = s.trim();
-        if (s.length() == 0) {
+        if (s.isEmpty()) {
             System.out.println(0);
             return;
         }
