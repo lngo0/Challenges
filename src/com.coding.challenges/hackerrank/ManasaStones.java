@@ -41,7 +41,8 @@ public class ManasaStones {
 
         int tc = sc.nextInt();
         sc.nextLine();
-        int n = 0, a = 0, b = 0;
+        int n, a, b;
+        List<List<Integer>> list = new ArrayList<>();
 
         for (int i = 0; i < tc; i++) {
             n = sc.nextInt();
@@ -52,7 +53,10 @@ public class ManasaStones {
             sc.nextLine();
 
             List<Integer> result = stones(n, a, b);
-            System.out.println(result);
+            list.add(result);
+        }
+        for (List<Integer> l : list) {
+            System.out.println(l);
         }
 
         sc.close();
