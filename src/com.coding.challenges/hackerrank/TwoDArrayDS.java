@@ -97,8 +97,6 @@ public class TwoDArrayDS {
     }
     
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
         List<List<Integer>> arr = new ArrayList<>();
 
         System.out.println(hourglassSum(arr));
